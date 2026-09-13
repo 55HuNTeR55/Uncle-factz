@@ -93,9 +93,10 @@ gets marked **Contested**, honestly, instead of forcing a fake agreement.
 ```bash
 cd Uncle-Factz
 python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+Important step -> source venv/bin/activate (mac and Linux) || # Windows: .\venv\Scripts\Activate.ps1
+cd backend
 pip install -r requirements.txt
-uvicorn main:app --reload
+uvicorn backend.main:app --reload --port 8000
 ```
 
 You'll need API keys for your LLM provider and Tavily — drop them in a
